@@ -253,7 +253,9 @@ if 'submit' in st.session_state and ("google_api" in st.session_state and st.ses
     if spacy_pos:
         if st.session_state.lang in "eng":
             doc = st.session_state.en_nlp(st.session_state.text)
+            print('eng', doc)
         elif st.session_state.lang in "ita":
             doc = st.session_state.it_nlp(st.session_state.text)
+            print('Ita', doc)
         visualize_parser(doc)
        
