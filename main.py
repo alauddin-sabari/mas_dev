@@ -12,6 +12,7 @@ import utils
 
 author_textrazor_token = os.getenv("TEXTRAZOR_TOKEN")
 author_google_key = os.getenv("GOOGLE_KEY")
+print(author_google_key)
 
 st.set_page_config(
     page_title="The Entities Swissknife",
@@ -126,7 +127,7 @@ Semantic publishing relies on Structured Data adoption and Entity Linking (Wikif
                 google_api = json.loads(google_api.getvalue().decode("utf-8"))
         else:
             google_api = json.loads(author_google_key)
-        
+            print(google_api)
 
     if input_type_selectbox == "URL":
         text_input = st.text_input('Please enter a URL', placeholder='https://gofishdigital.com/what-is-semantic-seo/')
